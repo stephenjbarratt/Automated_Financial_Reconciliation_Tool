@@ -9,7 +9,7 @@ In banking, ensuring loans are securely matched by collateral is vital to preven
 By automating the data pipeline, the tool eliminates manual lookup issues and protects the desk from human error. It evaluates user inputs for the collateral and automatically applies the total haircut percentage, based on precise foreign exchange (FX) penalty buffers for cross-currency trades, to calculate the maximum eligible loan. Ultimately the calculator ensures strict regulatory compliance, protects firm liquidity and significantly improves data integrity.
 
 ## Visual Preview
-![Automated_Financial_Reconciliation_Preview](images/Calculator.png)
+![Automated_Financial_Reconciliation_Preview](images/Reconciliation_Table.png)
 
 ## Problem Statement
 Daily reconciliation of internal trade books against external statements requires a lot of manual processing which is time consuming and leaves a lot of room for human error. This makes it difficult for operations teams to find and fix financial discrepancies before market deadlines, leading to financial exposure and increased risk.
@@ -54,7 +54,7 @@ In the example the Settlement Date, Direction and Settlement Amount column headi
 
 Next Append the Queries, to do this from the ribbon, click Home > Append Queries > Append Queries As New.
 In the Append Queries dialog box, include both the Internal Ledger and the External Statement queries, click ok.
-![Append Queries](images/)
+![Append Queries](images/Append_Tables.png)
 *Figure 2.0: Dialog box showing the two queries to be appended*
 
 Rename the query to Reconciliation.
@@ -64,19 +64,19 @@ Now retain only the reference columns. Select ISIN, Settlement_Date and Net_Sett
 ### Step 2: Merge the queries to the unique list
 Select the Reconciliation query, click Home > Merge Queries. In the Merge window, select the Internal Ledger query as the second table, click the ISIN, Settlement_Date and Net_Settlement_Amount columns. Ensure the join type is Left Outer and click ok.
 
-![Merge Queries](images/)
+![Merge Queries](images/Merge.png)
 *Figure 3.0: Dialog box showing the Merge Window*
 
 The message at the bottom of the merge window tells us that - records in the unique list are missing from the Internal Ledger.
 
 Click the arrow at the top of the Internal Ledger column, only click the Net_Settlement_Amount column, this is the column to be reconciled.
 
-![Column to ve Reconciled](images/)
-*Figure 4.0: Dialog box showing the Net_Settlement_Amount cloumn to be reconciled*
+![Column to ve Reconciled](images/Expand_Internal_Ledger.png)
+*Figure 4.0: Dialog box showing the Net_Settlement_Amount column to be reconciled*
 
 The missing values show as null values in the Net_Settlement_Amount column. Select the column and click Transform from the ribbon and Replace Values, replace null values with 0, so these values can be calculated on.
 
-![Replace nulls](images/)
+![Replace nulls](images/Replace_Values.png)
 *Figure 5.0: Replace Null values*
 
 The reconciliation query now looks like this:
@@ -91,7 +91,7 @@ Now we have a Reconciliation query with the data from both the Internal Ledger a
 ### Step 3: Calculate the differences
 The final step is to calculate the differences. Click Add Columns > Custom Columns. In the Custom Column dialog box, edit the column name to Variance and as the formula subtract the External Statement from the Internal Ledger.
 
-![Calculate Variance](images/)
+![Calculate Variance](images/Variance_Column.png)
 *Figure 7.0: Calculate Variance*
 
 Next change the data type of the Variance column to decimal number. Finally filter the variance column to remove 0 values. Now we have a list of the differences from both tables. Close and load the query into Excel.
