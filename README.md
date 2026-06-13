@@ -89,7 +89,7 @@ The missing values show as null values in the Net_Settlement_Amount column. Sele
 The reconciliation query now looks like this:
 
 
-![First Reconciliation](images/Internal_Reconciliation)
+![First Reconciliation](images/Internal_Reconciliation.png)
 
 *Figure 6.0: First Reconciliation*
 
@@ -112,9 +112,4 @@ The image below shows a list of all of the applied steps mentioned above in Powe
 *Figure 8.0: A list of the Applied Steps*
 
 
-
-
-*Figure 7.0: Calculate Variance*
-
-Next change the data type of the Variance column to decimal number. Finally filter the variance column to remove 0 values. Now we have a list of the differences from both tables. Close and load the query into Excel.
 
