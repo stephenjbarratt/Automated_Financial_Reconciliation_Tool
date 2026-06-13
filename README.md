@@ -111,5 +111,10 @@ The image below shows a list of all of the applied steps mentioned above in Powe
 
 *Figure 8.0: A list of the Applied Steps*
 
+## Conclusion & Operational Impact
+
+This project demonstrates how optimising financial workflows from manual entry to automated Power Query ETL pipelines minimizes operational risk and improves data integrity. By replacing manual spreadsheets with a three-step reconciliation framework, the tool eliminates human processing errors.
+
+
 
 
