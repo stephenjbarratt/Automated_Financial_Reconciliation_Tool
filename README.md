@@ -107,7 +107,7 @@ The final step is to calculate the differences. Click Add Columns > Custom Colum
 
 The image below shows a list of all of the applied steps mentioned above in Power Query. 
 
-![Applied Steps](images/Applied_Steps.png)
+![Applied Steps](images/Query_Settings.png)
 
 *Figure 8.0: A list of the Applied Steps*
 
