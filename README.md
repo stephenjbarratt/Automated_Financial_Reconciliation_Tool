@@ -56,6 +56,8 @@ Next Append the Queries, to do this from the ribbon, click Home > Append Queries
 In the Append Queries dialog box, include both the Internal Ledger and the External Statement queries, click ok.
 ![Append Queries](images/Append_Tables.png)
 
+*Figure 1.0: Image of the complete reconciliation table*
+
 *Figure 2.0: Dialog box showing the two queries to be appended*
 
 Rename the query to Reconciliation.
@@ -66,6 +68,7 @@ Now retain only the reference columns. Select ISIN, Settlement_Date and Net_Sett
 Select the Reconciliation query, click Home > Merge Queries. In the Merge window, select the Internal Ledger query as the second table, click the ISIN, Settlement_Date and Net_Settlement_Amount columns. Ensure the join type is Left Outer and click ok.
 
 ![Merge Queries](images/Merge.png)
+
 *Figure 3.0: Dialog box showing the Merge Window*
 
 The message at the bottom of the merge window tells us that - records in the unique list are missing from the Internal Ledger.
@@ -73,16 +76,19 @@ The message at the bottom of the merge window tells us that - records in the uni
 Click the arrow at the top of the Internal Ledger column, only click the Net_Settlement_Amount column, this is the column to be reconciled.
 
 ![Column to ve Reconciled](images/Expand_Internal_Ledger.png)
+
 *Figure 4.0: Dialog box showing the Net_Settlement_Amount column to be reconciled*
 
 The missing values show as null values in the Net_Settlement_Amount column. Select the column and click Transform from the ribbon and Replace Values, replace null values with 0, so these values can be calculated on.
 
 ![Replace nulls](images/Replace_Values.png)
+
 *Figure 5.0: Replace Null values*
 
 The reconciliation query now looks like this:
 
 ![First Reconciliation](images/)
+
 *Figure 6.0: First Reconciliation*
 
 Then merge the second query, repeat the same steps as above for the External Statement.
@@ -93,6 +99,7 @@ Now we have a Reconciliation query with the data from both the Internal Ledger a
 The final step is to calculate the differences. Click Add Columns > Custom Columns. In the Custom Column dialog box, edit the column name to Variance and as the formula subtract the External Statement from the Internal Ledger.
 
 ![Calculate Variance](images/Variance_Column.png)
+
 *Figure 7.0: Calculate Variance*
 
 Next change the data type of the Variance column to decimal number. Finally filter the variance column to remove 0 values. Now we have a list of the differences from both tables. Close and load the query into Excel.
