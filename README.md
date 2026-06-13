@@ -96,9 +96,3 @@ The final step is to calculate the differences. Click Add Columns > Custom Colum
 
 Next change the data type of the Variance column to decimal number. Finally filter the variance column to remove 0 values. Now we have a list of the differences from both tables. Close and load the query into Excel.
 
-
-
-
-
-### 3. Maximum Eligible Loan
-Maximum Eligible Loan = Collateral Market Value - Haircut Applied Value.
