@@ -70,7 +70,7 @@ Select the Reconciliation query, click Home > Merge Queries. In the Merge window
 
 *Figure 3.0: Dialog box showing the Merge Window*
 
-The message at the bottom of the merge window tells us that - records in the unique list are missing from the Internal Ledger.
+The message at the bottom of the merge window tells us that 3 records in the unique list are missing from the Internal Ledger.
 
 Click the arrow at the top of the Internal Ledger column, only click the Net_Settlement_Amount column, this is the column to be reconciled.
 
