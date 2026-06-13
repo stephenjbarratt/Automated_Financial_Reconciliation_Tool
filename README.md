@@ -1,12 +1,7 @@
-# Automated_Financial_Reconciliation
-In financial markets and market operations reconciliations are a critical risk management function. This project delivers an automated reconciliation tool using Power Query. 
-
-
-
+# Automated_Financial_Reconciliation 
 
 ## Executive Summary
-In banking, ensuring loans are securely matched by collateral is vital to prevent financial exposure. This project delivers an automated risk application that calculates risk-adjusted collateral values in real time.
-By automating the data pipeline, the tool eliminates manual lookup issues and protects the desk from human error. It evaluates user inputs for the collateral and automatically applies the total haircut percentage, based on precise foreign exchange (FX) penalty buffers for cross-currency trades, to calculate the maximum eligible loan. Ultimately the calculator ensures strict regulatory compliance, protects firm liquidity and significantly improves data integrity.
+In financial markets and market operations reconciliations are a critical risk management function. This project modernises the manual spreadsheet workflow with an automated ETL Pipeline using Power Query. Reconciling internal trade logs against external statements manually can be inefficient and can lead to increased risk in trade failures. To solve this the tool implements a three step reconciliation framework,creating a list of unique ISIN numbers and date references. Aligning the interal ledger and external statement and using a variance column to calculate financial differences. The result is a tool that removes manual processing risk and allows companies to isolate critical breaks in seconds, before markets close.
 
 ## Visual Preview
 ![Automated_Financial_Reconciliation_Preview](images/Reconciliation_table.png)
@@ -107,6 +102,17 @@ The final step is to calculate the differences. Click Add Columns > Custom Colum
 
 
 ![Calculate Variance](images/Variance_Column.png)
+
+*Figure 7.0: Create a Variance*
+
+The image below shows a list of all of the applied steps mentioned above in Power Query. 
+
+![Applied Steps](images/Applied_Steps.png)
+
+*Figure 8.0: A list of the Applied Steps*
+
+
+
 
 *Figure 7.0: Calculate Variance*
 
