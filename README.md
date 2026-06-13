@@ -59,8 +59,7 @@ Next Append the Queries, to do this from the ribbon, click Home > Append Queries
 In the Append Queries dialog box, include both the Internal Ledger and the External Statement queries, click ok.
 
 ![Append Queries](images/Append_Tables.png)
-
-*Figure 2.0: Dialog box showing the two queries to be appended*
+ *Figure 2.0: Dialog box showing the two queries to be appended*
 
 Rename the query to Reconciliation.
 
