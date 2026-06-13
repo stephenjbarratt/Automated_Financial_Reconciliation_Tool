@@ -9,7 +9,7 @@ In banking, ensuring loans are securely matched by collateral is vital to preven
 By automating the data pipeline, the tool eliminates manual lookup issues and protects the desk from human error. It evaluates user inputs for the collateral and automatically applies the total haircut percentage, based on precise foreign exchange (FX) penalty buffers for cross-currency trades, to calculate the maximum eligible loan. Ultimately the calculator ensures strict regulatory compliance, protects firm liquidity and significantly improves data integrity.
 
 ## Visual Preview
-![Automated_Financial_Reconciliation_Preview](images/Reconciliation_Table.png)
+![Automated_Financial_Reconciliation_Preview](images/Reconciliation_table.png)
 
 ## Problem Statement
 Daily reconciliation of internal trade books against external statements requires a lot of manual processing which is time consuming and leaves a lot of room for human error. This makes it difficult for operations teams to find and fix financial discrepancies before market deadlines, leading to financial exposure and increased risk.
@@ -55,6 +55,7 @@ In the example the Settlement Date, Direction and Settlement Amount column headi
 Next Append the Queries, to do this from the ribbon, click Home > Append Queries > Append Queries As New.
 In the Append Queries dialog box, include both the Internal Ledger and the External Statement queries, click ok.
 ![Append Queries](images/Append_Tables.png)
+
 *Figure 2.0: Dialog box showing the two queries to be appended*
 
 Rename the query to Reconciliation.
