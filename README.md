@@ -89,7 +89,7 @@ The missing values show as null values in the Net_Settlement_Amount column. Sele
 The reconciliation query now looks like this:
 
 
-![First Reconciliation](images/)
+![First Reconciliation](images/Internal_Reconciliation)
 
 *Figure 6.0: First Reconciliation*
 
